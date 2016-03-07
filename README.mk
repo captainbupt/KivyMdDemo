@@ -1,4 +1,4 @@
-vyMD
+# KyvyMD
 
 [Kivy](https://kivy.org/#home)是一个基于python的跨平台应用开发框架。它同时支持Linux, Windows, OS X, Android和iOS，并且能够识别大部分的操作。
 而[kivyMD](https://gitlab.com/kivymd/KivyMD)则是一个基于kivy的一个扩展包，它的目的是提供一个类似于Google Material Design的一套控件，这样，使用者就可以方便的将android上的Material Design效果移植到其他的平台上去。
