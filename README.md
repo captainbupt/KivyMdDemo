@@ -21,5 +21,5 @@
 安装完成后，从gitlab上把KivyMD clone下来：`git clone https://gitlab.com/kivymd/KivyMD.git`，然后执行`python setup.py install`就可以完成KivyMD的安装了。
 
 最后测试：`python kitchen_sink.py`就能够看到demo界面了。
-![Alt text](./屏幕快照 2016-03-03 下午1.53.32.png)
-![Alt text](./屏幕快照 2016-03-03 下午1.53.56.png)
+![Alt text](images/1.png)
+![Alt text](images/2.png)
