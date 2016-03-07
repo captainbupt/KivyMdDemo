@@ -2,8 +2,6 @@ from kivy.app import App
 from kivy.metrics import dp
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.scrollview import ScrollView
-from kivy.uix.label import Label
-from kivy.uix.textinput import TextInput
 from kivymd.toolbar import Toolbar
 from kivymd.theming import ThemeManager
 from kivy.properties import ObjectProperty
@@ -13,6 +11,7 @@ from kivymd.label import MDLabel
 from kivymd.textfields import SingleLineTextField
 from kivymd.button import MDFlatButton, MDRaisedButton
 from kivy.uix.screenmanager import ScreenManager, Screen
+from kivymd.selectioncontrols import MDCheckbox, MDSwitch
 
 
 class MyToolbar(Toolbar):
@@ -47,14 +46,25 @@ class MyScreen(Screen):
         textField = SingleLineTextField(id='text_filed', size_hint=(0.8, None), height=dp(48))
         textField.hint_text='This is a pretty text filed'
         boxLayout.add_widget(textField)
-        buttonContainer = BoxLayout(orientation='horizontal', padding=dp(48))
+        buttonContainer = BoxLayout(orientation='horizontal', height=dp(48))
         flatButton = MDFlatButton(text='FlatButton')
-        flatButton.size = (3*dp(48),dp(48))
+        # size is not working somehow
+        # flatButton.size = (3*dp(48), dp(48))
         buttonContainer.add_widget(flatButton)
         raiseButton = MDRaisedButton(text='RaiseButton')
-        raiseButton.size = (3*dp(48),dp(48))
+        # raiseButton.size = (3*dp(48), dp(48))
         buttonContainer.add_widget(raiseButton)
         boxLayout.add_widget(buttonContainer)
+
+        switchContainer = BoxLayout(orientation='horizontal')
+        checkbox1 = MDCheckbox(group='test')
+        # checkbox1.size=(dp(48), dp(48))
+        switchContainer.add_widget(checkbox1)
+        checkbox2 = MDCheckbox(group='test')
+        # checkbox2.size=(dp(48), dp(48))
+        switchContainer.add_widget(checkbox2)
+        boxLayout.add_widget(switchContainer)
+
 
 
 class MyScreenManager(ScreenManager):
