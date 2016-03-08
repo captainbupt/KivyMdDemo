@@ -17,7 +17,7 @@ from kivymd.selectioncontrols import MDCheckbox, MDSwitch
 class MyToolbar(Toolbar):
     def callback(self, x):
         # print type(App.get_running_app())
-        print "here we go"
+        print("here we go")
         App.get_running_app().show_example_dialog()
         pass
 
